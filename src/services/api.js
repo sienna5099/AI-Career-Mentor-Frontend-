@@ -25,7 +25,7 @@ import { careers } from "../data/careers";
 import { mentors, getMockMentorReply } from "../data/mentors";
 
 const LATENCY = 500;
-const BACKEND_BASE_URL = "http://localhost:8080";
+const BACKEND_BASE_URL = "https://ai-career-mentor-backend-pihm.onrender.com";
 const SERVER_ERROR_MESSAGE = "Unable to connect to the server. Please try again.";
 
 const delay = (data, ms = LATENCY) =>
