@@ -51,8 +51,6 @@ export default function CareerProfile() {
       if (response.success && response.profile) {
         setForm(response.profile);
         setHasProfile(true);
-      } else if (response.message && !response.message.toLowerCase().includes("profile not found")) {
-        setError(response.message);
       }
       setLoading(false);
     });
@@ -90,7 +88,7 @@ export default function CareerProfile() {
       return;
     }
     if (step === 2) {
-      await saveProfile(false);
+      await saveProfile(true);
       return;
     }
     setStep((current) => current + 1);
